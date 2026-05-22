@@ -5,6 +5,7 @@
 Этот репозиторий содержит конфигурацию для сбора, парсинга и визуализации логов Nginx (Access и Error) с использованием стека **Fluent Bit**, **Graylog** и **Grafana**.
 
 Основная цель — корректно парсить сложные логи Nginx на стороне агента (Fluent Bit), отправлять их в Graylog в формате GELF без ошибок `missing short_message`, и визуализировать метрики в Grafana.
+<img width="1618" height="823" alt="image" src="https://github.com/user-attachments/assets/79292dbb-07bc-47c6-9ffb-7593bd6f1a93" />
 
 ## 📂 Структура репозитория
 
