@@ -14,9 +14,9 @@
 ├── parsers.conf                 # Определение парсеров (Regex для Nginx)
 ├── 01-global.filters.conf       # Глобальные фильтры (добавление хоста, окружения)
 ├── 02-graylog.output.conf       # Конфигурация вывода в Graylog (GELF)
+├── Grafana_dashboard.json   # Дашборд для Grafana (импортировать вручную)
 └── nginx_access.log-parsing-graylog-Visualization-Grafana/
     └── pipeline_rules/          # Правила обработки (Pipeline Rules) для Graylog
-    └── Grafana_dashboard.json   # Дашборд для Grafana (импортировать вручную)
 ```
 
 ## ⚙️ Ключевые особенности решения
