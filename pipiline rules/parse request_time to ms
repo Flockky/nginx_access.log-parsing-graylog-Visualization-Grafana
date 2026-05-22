@@ -1,0 +1,7 @@
+rule "parse request_time to ms"
+when
+  has_field("request_time")
+then
+  let num_ms = to_double($message.request_time) * to_double(1000);
+  set_field("request_time_ms", num_ms);
+end
