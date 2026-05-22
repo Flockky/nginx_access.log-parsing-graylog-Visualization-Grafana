@@ -1,0 +1,7 @@
+rule "parse body_bytes_sent"
+when
+  has_field("body_bytes_sent")
+then
+  let num = to_long($message.body_bytes_sent);
+  set_field("body_bytes_sent_num", num);
+end
