@@ -1,0 +1,7 @@
+rule "parse upstream_response_time"
+when
+  has_field("upstream_response_time")
+then
+  let num = to_double($message.upstream_response_time) * to_double(1000);
+  set_field("upstream_response_time_num", num);
+end
