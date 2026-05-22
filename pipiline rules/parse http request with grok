@@ -1,0 +1,14 @@
+rule "parse http request with grok"
+when
+  grok(
+    pattern: "%{WORD:method} %{URIPATH:uri}(?:\\s+%{DATA:protocol})?",
+    value: to_string($message.message)
+  ).matches == true
+then
+  let parsed = grok(
+    pattern: "%{WORD:method} %{URIPATH:uri}(?:\\s+%{DATA:protocol})?",
+    value: to_string($message.message)
+  );
+  set_field("request_path", parsed.uri);
+  set_field("request_method", parsed.method);
+end
