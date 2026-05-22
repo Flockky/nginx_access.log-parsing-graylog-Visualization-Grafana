@@ -1,0 +1,7 @@
+rule "parse upstream_cache_status"
+when
+  has_field("upstream_cache_status")
+then
+  let num = to_double($message.upstream_cache_status) * to_double(1000);
+  set_field("upstream_cache_status_num", num);
+end
